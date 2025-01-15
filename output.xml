@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.3 on win32)" generated="2025-01-15T16:36:13.564828" rpa="false" schemaversion="5">
+<suite id="s1" name="Login Test" source="C:\Users\Yogesh.c\Yogesh_Automation_1501\Tests\Login_Test.robot">
+<test id="s1-t1" name="Verify Successful Login to ZPFMS" line="10">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-01-15T16:36:13.770507" level="INFO">Opening browser 'chrome' to base url 'http://192.168.0.162:9696/'.</msg>
+<arg>${LOGIN_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-01-15T16:36:13.770507" elapsed="5.599833"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-01-15T16:36:19.371353" elapsed="0.041160"/>
+</kw>
+<kw name="Login to ZPFMS">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:txtUser</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-15T16:36:19.414503" elapsed="0.031572"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-15T16:36:19.447585" level="INFO">Typing text 'Dbchavan' into text field 'id:txtUser'.</msg>
+<arg>id:txtUser</arg>
+<arg>Dbchavan</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-15T16:36:19.447585" elapsed="0.101619"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:txtPass</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-15T16:36:19.549204" elapsed="0.018348"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-15T16:36:19.567552" level="INFO">Typing text 'Pass@123' into text field 'id:txtPass'.</msg>
+<arg>id:txtPass</arg>
+<arg>Pass@123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-15T16:36:19.567552" elapsed="0.087255"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath://*[@id="btnLogin"]</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-15T16:36:19.654807" elapsed="0.014569"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-15T16:36:19.670399" level="INFO">Clicking element 'xpath://*[@id="btnLogin"]'.</msg>
+<arg>xpath://*[@id="btnLogin"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-15T16:36:19.670399" elapsed="1.234825"/>
+</kw>
+<status status="PASS" start="2025-01-15T16:36:19.414503" elapsed="1.491728"/>
+</kw>
+<doc>This test case verifies that user is able to successfully Login to ZPFMS</doc>
+<tag>Smoke</tag>
+<status status="PASS" start="2025-01-15T16:36:13.769453" elapsed="7.136778"/>
+</test>
+<test id="s1-t2" name="Click on Rejected Bill" line="16">
+<status status="FAIL" start="2025-01-15T16:36:20.907420" elapsed="0.000000">Test cannot be empty.</status>
+</test>
+<test id="s1-t3" name="Create AA Details" line="17">
+<status status="FAIL" start="2025-01-15T16:36:20.908421" elapsed="0.000000">Test cannot be empty.</status>
+</test>
+<status status="FAIL" start="2025-01-15T16:36:13.566094" elapsed="7.343326"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Smoke</stat>
+</tag>
+<suite>
+<stat pass="1" fail="2" skip="0" id="s1" name="Login Test">Login Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
