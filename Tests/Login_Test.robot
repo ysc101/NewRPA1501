@@ -13,8 +13,8 @@ Verify Successful Login to ZPFMS
     Open Browser    ${LOGIN_URL}    ${BROWSER}
     Maximize Browser Window
     Login to ZPFMS
-Click on Rejected Bill
-Create AA Details
+    Click on Rejected Bill
+    Create AA Details
 *** Keywords ***
 Login to ZPFMS
     Wait Until Element Is Visible  id:txtUser        timeout=10
@@ -32,6 +32,5 @@ Click on Rejected Bill
     Click Element              xpath://*[@id="body_btnBack"]
     Wait Until Element Is Visible  xpath://*[@id="body_Button2"]     timeout=10
     Click Element              xpath://*[@id="body_Button2"]
-Create AA Details
-    Click Element             xpath://*[@id="ctl01"]/div[5]/div[3]/div/div/ul/li[1]
+
     Close Browser
